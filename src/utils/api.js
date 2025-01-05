@@ -1,6 +1,8 @@
+const API_URL = process.env.NEXT_PUBLIC_API_URL
+
 export const fetchJobSeekers = async () => {
     try {
-      const response = await fetch('http://localhost:8090/api/jobseekers');
+      const response = await fetch(`${API_URL}/api/jobseekers`);
       const data = await response.json();
       return data;
     } catch (error) {
